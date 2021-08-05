@@ -1,14 +1,16 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Content from './components/Content';
-import background from './images/promo-zone.png'; 
+import Content from './components/Content/Content';
+
 
 function App() {
+
   return (
-    <div className='background-image' style ={ { backgroundImage: `url(${background})` } }>
-      <Content />
-    </div>
-    // <img src={background} alt="background"/>
-  );
+    <Router>
+      <Switch>
+        <Route path="/promo" component={Content}></Route>
+      </Switch>
+    </Router>);
 }
 
 export default App;
